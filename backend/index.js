@@ -3,8 +3,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import recipeRouters from "./routes/recipe.js";
 
-import dotenv from "dotenv";
-dotenv.config();
+import "dotenv/config";
 
 const app = express();
 app.use(cors());
