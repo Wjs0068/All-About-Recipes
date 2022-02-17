@@ -125,4 +125,21 @@
 }
 
 @media (max-width: 670px) {
+  .input-form {
+    font-size: 1.2rem;
+  }
 }
+
+@media (max-width: 548px) {
+  .input-form {
+    font-size: 0.9rem;
+  }
+
+  .add {
+    font-size: 0.8rem;
+  }
+
+  .remove {
+    font-size: 0.8rem;
+  }
+} ;

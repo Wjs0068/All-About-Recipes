@@ -8,9 +8,16 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const { isAuthenticated } = useAuth0();
-  const { menu, setMenu } = useState(true);
+  const [menu, setMenu] = useState(false);
 
-  const handleMenu = () => {};
+  const handleMenu = () => {
+    setMenu(true);
+  };
+
+  const handleExit = () => {
+    setMenu(false);
+  };
+
   if (window.innerWidth > 460) {
     return (
       <div className="navbar-container">
@@ -45,8 +52,7 @@ const Navbar = () => {
       <div className="whole-thing">
         <div className="navbar-container">
           <div className="navbar-left">
-            <AiOutlineMenu className="menu" onClick={handleMenu} />
-            <AiOutlineClose className="exit" />
+            <AiOutlineClose className="exit" onClick={handleExit} />
           </div>
           <div className="navbar-middle">
             <h3 className="headerThree1">All About Recipes</h3>
@@ -71,7 +77,19 @@ const Navbar = () => {
         </div>
       </div>
     ) : (
-      <div>Hello</div>
+      <div className="whole-thing">
+        <div className="navbar-container">
+          <div className="navbar-left">
+            <AiOutlineMenu className="menu" onClick={handleMenu} />
+          </div>
+          <div className="navbar-middle">
+            <h3 className="headerThree1">All About Recipes</h3>
+          </div>
+          <div className="navbar-right">
+            {isAuthenticated ? <LogoutButton /> : <LoginButton />}
+          </div>
+        </div>
+      </div>
     );
   }
 };
