@@ -1,0 +1,151 @@
+.list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.headerAll {
+  font-size: 3.6rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 10rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 30rem;
+  height: 40rem;
+  margin-bottom: 10rem;
+
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  -webkit-box-shadow: -4px 2px 15px 11px #d0d0d0;
+  box-shadow: -4px 2px 15px 11px #d0d0d0;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  height: 100%;
+  color: black;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  overflow: scroll;
+}
+
+.flip-card-back::-webkit-scrollbar {
+  display: none;
+}
+
+.headerTwo {
+  font-size: 4rem;
+  color: #333;
+}
+
+.headerThree {
+  font-size: 2.2rem;
+  color: #333;
+  padding-bottom: 2rem;
+}
+
+.headerFour {
+  font-size: 1.8rem;
+  color: #333;
+  padding-bottom: 2rem;
+}
+
+.headerFive {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.ingredient-container1 {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.ingredient {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  justify-items: center;
+  grid-template-areas: "a a a c c b b b ";
+  padding-bottom: 0.5rem;
+  padding: 1rem;
+}
+
+.ingredient-name {
+  font-size: 1.2rem;
+  grid-area: a;
+}
+
+.ingredient-amount {
+  font-size: 1.2rem;
+  grid-area: b;
+}
+.description {
+  text-align: left;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+.image {
+  height: 24rem;
+  width: 30rem;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
+
+.stars {
+  font-size: 2.4rem;
+}
+
+@media (max-width: 1075px) {
+  .list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .list-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,128 @@
+.container-form {
+  height: auto;
+  margin-bottom: 0rem;
+}
+
+.form-create {
+  border: 1px solid black;
+  margin: 0 auto;
+  max-width: 80rem;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1.6rem;
+  background-color: #f7f7f7;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-form {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 90%;
+  background: #fff;
+  font-size: 1.6rem;
+  font-family: "Times New Roman", Times, serif;
+  padding: 4%;
+  max-width: 90%;
+  min-width: 90%;
+
+  border: 1px solid #ccc;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+::placeholder {
+  color: #333;
+  font-weight: 600;
+  padding-top: 0.4rem;
+}
+.input-form:focus {
+  box-shadow: 0 0 5px #43d1af;
+  padding: 3%;
+  border: 1px solid #43d1af;
+}
+
+.ingredient-container {
+  display: grid;
+  margin: 0 auto;
+  width: 90%;
+  grid-template-columns: 4fr 4fr 1fr 1fr;
+  justify-items: stretch;
+  column-gap: 1rem;
+  margin-top: 1rem;
+}
+
+.add {
+  height: 3rem;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 90%;
+
+  background: #43d1af;
+  border-bottom: 2px solid #30c29e;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  color: #fff;
+}
+
+.add:hover {
+  background: #2ebc99;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.remove {
+  height: 3rem;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+
+  background: #43d1af;
+  border-bottom: 2px solid #30c29e;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  color: #fff;
+}
+
+.remove:hover {
+  background: #2ebc99;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.create-btn {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 90%;
+  font-size: 2rem;
+
+  background: #43d1af;
+  border-bottom: 2px solid #30c29e;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  color: #fff;
+  height: 6rem;
+}
+
+.create-btn:hover {
+  background: #2ebc99;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+@media (max-width: 670px) {
+}

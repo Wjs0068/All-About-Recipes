@@ -1,0 +1,9 @@
+.loading-container {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.loading {
+  font-size: 3.2rem;
+  color: #333;
+}

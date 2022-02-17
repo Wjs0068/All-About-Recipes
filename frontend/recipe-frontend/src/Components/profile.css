@@ -1,0 +1,11 @@
+.profile {
+  height: 4rem;
+  width: 4rem;
+}
+
+@media (max-width: 807px) {
+  .profile {
+    height: 2rem;
+    width: 2rem;
+  }
+} ;

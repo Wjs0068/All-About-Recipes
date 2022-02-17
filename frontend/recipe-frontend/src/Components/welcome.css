@@ -1,0 +1,31 @@
+.welcome-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(34, 34, 34, 0.6)),
+    url("https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+  height: 92vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.welcome-btn {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  color: #333;
+  font-size: 2.8rem;
+  background-color: #43d1af;
+  padding: 1rem;
+  text-decoration: none;
+
+  border: 2px solid white;
+}
+
+a.welcome-btn:hover {
+  border: 2px solid black;
+  color: #43d1af;
+  background-color: #333;
+  cursor: pointer;
+  transition: all 0.3s;
+}
