@@ -13,7 +13,7 @@ function List() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/recipe/getall/${page}`)
+      .get(`https://all-about-recipes.herokuapp.com/recipe/getall/${page}`)
       .then((allRecipes) => {
         console.log(allRecipes.data.amount);
 

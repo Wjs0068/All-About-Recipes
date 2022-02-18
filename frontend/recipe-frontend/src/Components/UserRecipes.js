@@ -25,24 +25,28 @@ function UserRecipes() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/recipe/${user.email}`)
+      .get(`https://all-about-recipes.herokuapp.com/recipe/${user.email}`)
       .then((userRecipes) => {
         setRecipeList(userRecipes.data);
       });
   }, [user]);
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:5000/recipe/${id}`).then(() => {
-      window.location.reload(false);
-    });
+    axios
+      .delete(`https://all-about-recipes.herokuapp.com/recipe/${id}`)
+      .then(() => {
+        window.location.reload(false);
+      });
   };
 
   const handleEdit = (id) => {
-    axios.get(`http://localhost:5000/recipe/mine/${id}`).then((userRecipes) => {
-      setRecipe(userRecipes.data);
-      setIngredientList(userRecipes.data[0].ingredients);
-      setEdit(false);
-    });
+    axios
+      .get(`https://all-about-recipes.herokuapp.com/recipe/mine/${id}`)
+      .then((userRecipes) => {
+        setRecipe(userRecipes.data);
+        setIngredientList(userRecipes.data[0].ingredients);
+        setEdit(false);
+      });
   };
 
   const handleInputChange = (e, index) => {
@@ -69,7 +73,10 @@ function UserRecipes() {
   const finishEdit = (id) => {
     setRecipe(recipe);
     axios
-      .put(`http://localhost:5000/recipe/change/${id}`, recipe)
+      .put(
+        `https://all-about-recipes.herokuapp.com/recipe/change/${id}`,
+        recipe
+      )
       .then((recipe) => {
         window.location.reload(false);
 

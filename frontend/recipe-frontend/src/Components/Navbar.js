@@ -30,16 +30,25 @@ const Navbar = () => {
           />
         </div>
         <div className="navbar-right">
-          <a className="link" href="http://localhost:3000">
+          <a className="link" href="https://sharp-mayer-fa2c57.netlify.app">
             Home
           </a>
-          <a className="link" href="http://localhost:3000/form">
+          <a
+            className="link"
+            href="https://sharp-mayer-fa2c57.netlify.app/form"
+          >
             Create
           </a>
-          <a className="link" href="http://localhost:3000/getall">
+          <a
+            className="link"
+            href="https://sharp-mayer-fa2c57.netlify.app/getall"
+          >
             Recipes
           </a>
-          <a className="link" href="http://localhost:3000/myRecipes">
+          <a
+            className="link"
+            href="https://sharp-mayer-fa2c57.netlify.app/myRecipes"
+          >
             My Recipes
           </a>
           <Profile />
@@ -62,16 +71,25 @@ const Navbar = () => {
           </div>
         </div>
         <div className="mobile-menu">
-          <a className="link" href="http://localhost:3000">
+          <a className="link" href="https://sharp-mayer-fa2c57.netlify.app">
             Home
           </a>
-          <a className="link" href="http://localhost:3000/form">
+          <a
+            className="link"
+            href="https://sharp-mayer-fa2c57.netlify.app/form"
+          >
             Create
           </a>
-          <a className="link" href="http://localhost:3000/getall">
+          <a
+            className="link"
+            href="https://sharp-mayer-fa2c57.netlify.app/getall"
+          >
             Recipes
           </a>
-          <a className="link" href="http://localhost:3000/myRecipes">
+          <a
+            className="link"
+            href="https://sharp-mayer-fa2c57.netlify.app/myRecipes"
+          >
             My Recipes
           </a>
         </div>

@@ -21,9 +21,11 @@ function Form() {
   });
 
   const createRecipe = () => {
-    axios.post("http://localhost:5000/recipe", recipe).then(() => {
-      window.location.reload(false);
-    });
+    axios
+      .post("https://all-about-recipes.herokuapp.com/recipe", recipe)
+      .then(() => {
+        window.location.reload(false);
+      });
   };
 
   console.log(ingredientList);
