@@ -30,24 +30,24 @@ const Navbar = () => {
           />
         </div>
         <div className="navbar-right">
-          <a className="link" href="https://sharp-mayer-fa2c57.netlify.app">
+          <a className="link" href="/">
             Home
           </a>
           <a
             className="link"
-            href="https://sharp-mayer-fa2c57.netlify.app/form"
+            href="/form"
           >
             Create
           </a>
           <a
             className="link"
-            href="https://sharp-mayer-fa2c57.netlify.app/getall"
+            href="/getall"
           >
             Recipes
           </a>
           <a
             className="link"
-            href="https://sharp-mayer-fa2c57.netlify.app/myRecipes"
+            href="/myRecipes"
           >
             My Recipes
           </a>
@@ -71,24 +71,24 @@ const Navbar = () => {
           </div>
         </div>
         <div className="mobile-menu">
-          <a className="link" href="https://sharp-mayer-fa2c57.netlify.app">
+          <a className="link" href="/">
             Home
           </a>
           <a
             className="link"
-            href="https://sharp-mayer-fa2c57.netlify.app/form"
+            href="/form"
           >
             Create
           </a>
           <a
             className="link"
-            href="https://sharp-mayer-fa2c57.netlify.app/getall"
+            href="/getall"
           >
             Recipes
           </a>
           <a
             className="link"
-            href="https://sharp-mayer-fa2c57.netlify.app/myRecipes"
+            href="/myRecipes"
           >
             My Recipes
           </a>
