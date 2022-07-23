@@ -25,7 +25,7 @@ function UserRecipes() {
 
   useEffect(() => {
     axios
-      .get(`https://all-about-recipes.herokuapp.com/recipe/${user.email}`)
+      .get(`http://localhost:5000/recipe/${user.email}`)
       .then((userRecipes) => {
         setRecipeList(userRecipes.data);
       });
@@ -33,7 +33,7 @@ function UserRecipes() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`https://all-about-recipes.herokuapp.com/recipe/${id}`)
+      .delete(`http://localhost:5000/recipe/${id}`)
       .then(() => {
         window.location.reload(false);
       });
@@ -41,7 +41,7 @@ function UserRecipes() {
 
   const handleEdit = (id) => {
     axios
-      .get(`https://all-about-recipes.herokuapp.com/recipe/mine/${id}`)
+      .get(`http://localhost:5000/recipe/mine/${id}`)
       .then((userRecipes) => {
         setRecipe(userRecipes.data);
         setIngredientList(userRecipes.data[0].ingredients);
@@ -74,7 +74,7 @@ function UserRecipes() {
     setRecipe(recipe);
     axios
       .put(
-        `https://all-about-recipes.herokuapp.com/recipe/change/${id}`,
+        `http://localhost:5000/recipe/change/${id}`,
         recipe
       )
       .then((recipe) => {

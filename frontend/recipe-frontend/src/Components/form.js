@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./form.css";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -8,7 +8,13 @@ function Form() {
     { name: "", amount: "" },
   ]);
 
-  const { user } = useAuth0();
+  let axiosConfig = {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  };
+
+  const { user, isAuthenticated } = useAuth0();
 
   const [recipe, setRecipe] = useState({
     name: "",
@@ -20,15 +26,11 @@ function Form() {
     user: user.email,
   });
 
-  const createRecipe = () => {
-    axios
-      .post("https://all-about-recipes.herokuapp.com/recipe", recipe)
-      .then(() => {
-        window.location.reload(false);
-      });
+  const createRecipe = (recipe) => {
+    axios.post("http://localhost:5000/recipe", recipe, axiosConfig).then(() => {
+      window.location.reload(false);
+    });
   };
-
-  console.log(ingredientList);
 
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
@@ -51,13 +53,16 @@ function Form() {
     setIngredientList([...ingredientList, { name: "", amount: "" }]);
   };
 
+  console.log(JSON.stringify(recipe));
   return (
     <div className="container-form">
-      <form className="form-create">
+      <form name="product" data-netlify="true" className="form-create">
         <br />
         <input
+          required="true"
           placeholder="Dish Name"
           label="Name"
+          name="name"
           className="input-form"
           value={recipe.name}
           onChange={(event) => {
@@ -67,6 +72,7 @@ function Form() {
         <br />
         <br />
         <input
+          name="cuisine"
           placeholder="Cuisine"
           className="input-form"
           label="Catergory"
@@ -116,6 +122,7 @@ function Form() {
         <br />
         <br />
         <textarea
+          name="message"
           placeholder="Recipe Details"
           className="input-form"
           label="Description"
@@ -127,6 +134,8 @@ function Form() {
         <br />
         <br />
         <input
+          required="true"
+          name="image"
           placeholder="Image Url"
           className="input-form"
           label="Image Url"
@@ -134,10 +143,12 @@ function Form() {
           onChange={(event) => {
             setRecipe({ ...recipe, imageUrl: event.target.value });
           }}
-        ></input>{" "}
+        ></input>
         <br />
         <br />
         <input
+          required="true"
+          name="stars"
           className="input-form"
           label="Stars"
           placeholder="Rating out of 5"
@@ -146,7 +157,7 @@ function Form() {
             setRecipe({ ...recipe, stars: event.target.value });
           }}
         ></input>
-        <button className="create-btn" onClick={createRecipe}>
+        <button className="create-btn" onClick={() => createRecipe(recipe)}>
           Create Recipe
         </button>
       </form>

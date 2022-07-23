@@ -48,7 +48,7 @@ export const deleteRecipe = async (req, res) => {
 
   try {
     await RecipeData.findByIdAndDelete(id).exec();
-    res.send("Successfully deleted");
+    res.send("successfully deleted");
   } catch (error) {
     console.log(error);
   }

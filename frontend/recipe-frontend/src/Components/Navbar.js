@@ -22,7 +22,14 @@ const Navbar = () => {
     return (
       <div className="navbar-container">
         <div className="navbar-left">
-          <h3 className="headerThree1">All About Recipes</h3>
+          <button
+            onClick={() => {
+              window.location.assign("http://localhost:3000");
+            }}
+            className="headerThree1"
+          >
+            All About Recipes
+          </button>
           <img
             alt="logo"
             className="logo"
@@ -33,22 +40,13 @@ const Navbar = () => {
           <a className="link" href="/">
             Home
           </a>
-          <a
-            className="link"
-            href="/form"
-          >
+          <a className="link" href="/form">
             Create
           </a>
-          <a
-            className="link"
-            href="/getall"
-          >
+          <a className="link" href="/getall">
             Recipes
           </a>
-          <a
-            className="link"
-            href="/myRecipes"
-          >
+          <a className="link" href="/myRecipes">
             My Recipes
           </a>
           <Profile />
@@ -74,22 +72,13 @@ const Navbar = () => {
           <a className="link" href="/">
             Home
           </a>
-          <a
-            className="link"
-            href="/form"
-          >
+          <a className="link" href="/form">
             Create
           </a>
-          <a
-            className="link"
-            href="/getall"
-          >
+          <a className="link" href="/getall">
             Recipes
           </a>
-          <a
-            className="link"
-            href="/myRecipes"
-          >
+          <a className="link" href="/myRecipes">
             My Recipes
           </a>
         </div>

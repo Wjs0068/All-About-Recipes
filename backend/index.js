@@ -13,6 +13,8 @@ app.use("/recipe", recipeRouters);
 
 mongoose.connect(process.env.MONGO_CLIENT);
 
-app.listen(process.env.PORT || 5000, () => {
-  console.log(`Server is running on port`);
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });

@@ -12,6 +12,10 @@
 .headerThree1 {
   font-size: 2rem;
   color: #333;
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .navbar-left {
