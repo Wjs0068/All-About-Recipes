@@ -3,13 +3,23 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.list-container__headerAll--container {
+  position: sticky;
+  top: 60px;
+  z-index: 20;
+
+  height: 10rem;
+}
+
 .headerAll {
   font-size: 3.6rem;
   color: #333;
+  padding: 4rem;
   font-weight: 700;
-  margin-bottom: 10rem;
+
   text-align: center;
-  margin-top: 2rem;
+
+  background-color: white;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -21,9 +31,9 @@
 
   border-top-left-radius: 11px;
   border-top-right-radius: 11px;
-  -webkit-box-shadow: -4px 2px 15px 11px #d0d0d0;
-  box-shadow: -4px 2px 15px 11px #d0d0d0;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  /* -webkit-box-shadow: -4px 2px 15px 11px #d0d0d0; */
+  box-shadow: -2px 2px 5px 2px #d0d0d0;
+  perspective: 1000px;
 }
 
 /* This container is needed to position the front and back side */

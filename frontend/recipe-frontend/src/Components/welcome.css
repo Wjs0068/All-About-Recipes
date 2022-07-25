@@ -1,9 +1,10 @@
 .welcome-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 100)),
+    url(../FoodImage.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 92vh;
-  background: linear-gradient(-45deg, #101010, #202020, #383838, #606060);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -22,7 +23,7 @@
   }
 }
 
-a.welcome-btn {
+.welcome-btn {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
@@ -35,7 +36,7 @@ a.welcome-btn {
   border: 2px solid white;
 }
 
-a.welcome-btn:hover {
+.welcome-btn:hover {
   border: 2px solid black;
   color: #43d1af;
   background-color: #333;

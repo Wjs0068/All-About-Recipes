@@ -6,7 +6,6 @@ export const getRecipes = async (req, res) => {
   const query = req.query.search;
   page = page - 1;
   const estimate = await RecipeData.estimatedDocumentCount();
-  console.log(estimate);
 
   const allRecipes = await RecipeData.find()
     .limit(resultsPerPage)
@@ -22,9 +21,9 @@ export const getRecipes = async (req, res) => {
 
 export const getRecipeByUser = async (req, res) => {
   const email = req.params.email;
-  console.log(email);
 
   const userRecipes = await RecipeData.find({ user: email });
+  console.log(userRecipes);
   try {
     res.status(200).json(userRecipes);
   } catch (error) {
@@ -67,7 +66,6 @@ export const editRecipe = async (req, res) => {
 
 export const changeRecipe = async (req, res) => {
   const data = req.body;
-  console.log(req.body[0]._id);
 
   try {
     await RecipeData.findByIdAndUpdate({ _id: req.body[0]._id }, data);

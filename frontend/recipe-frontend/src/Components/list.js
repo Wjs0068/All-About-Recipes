@@ -32,7 +32,9 @@ function List() {
 
   return (
     <>
-      <h2 className="headerAll">All Recipes</h2>
+      <div className="list-container__headerAll--container">
+        <h2 className="headerAll">All Recipes</h2>
+      </div>
       <div className="list-container">
         {recipeList.map((recipe, key) => {
           return (

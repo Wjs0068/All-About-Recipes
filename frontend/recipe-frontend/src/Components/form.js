@@ -53,6 +53,15 @@ function Form() {
     setIngredientList([...ingredientList, { name: "", amount: "" }]);
   };
 
+  const onChange = (event) => {
+    // this will return C:\fakepath\somefile.ext
+
+    const files = event.target.files;
+
+    //this will return an ARRAY of File object
+    console.log(files);
+  };
+
   console.log(JSON.stringify(recipe));
   return (
     <div className="container-form">
@@ -139,6 +148,7 @@ function Form() {
           placeholder="Image Url"
           className="input-form"
           label="Image Url"
+          accept="image/png, image/jpeg"
           value={recipe.imageUrl}
           onChange={(event) => {
             setRecipe({ ...recipe, imageUrl: event.target.value });
@@ -148,6 +158,7 @@ function Form() {
         <br />
         <input
           required="true"
+          type="number"
           name="stars"
           className="input-form"
           label="Stars"
