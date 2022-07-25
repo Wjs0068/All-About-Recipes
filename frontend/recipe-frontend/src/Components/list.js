@@ -60,17 +60,15 @@ function List() {
                 </div>
 
                 <div className="flip-card-back">
+                  <h5 className="headerFive">Ingredients</h5>
                   <div className="ingredient-container1">
-                    <h5 className="headerFive">Ingredients</h5>
                     {recipe.ingredients.map((arrayItems) => {
                       const { name, amount } = arrayItems;
                       return (
-                        <div>
-                          <div className="ingredient">
-                            <p className="ingredient-name">{name}</p>
+                        <div className="ingredient">
+                          <p className="ingredient-name">{name}</p>
 
-                            <p className="ingredient-amount">{amount}</p>
-                          </div>
+                          <p className="ingredient-amount">{amount}</p>
                         </div>
                       );
                     })}

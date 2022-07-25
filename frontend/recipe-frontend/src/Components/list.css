@@ -1,6 +1,7 @@
 .list-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 5rem;
 }
 
 .list-container__headerAll--container {
@@ -106,28 +107,28 @@
 }
 
 .ingredient-container1 {
-  margin-bottom: 2rem;
-  margin-top: 2rem;
 }
 
 .ingredient {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  align-items: center;
-  justify-items: center;
-  grid-template-areas: "a a a c c b b b ";
   padding-bottom: 0.5rem;
   padding: 1rem;
+  width: 26rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .ingredient-name {
   font-size: 1.2rem;
-  grid-area: a;
+
+  text-align: left;
+  word-break: break-word;
+  width: 75%;
 }
 
 .ingredient-amount {
   font-size: 1.2rem;
-  grid-area: b;
+  width: 25%;
 }
 .description {
   text-align: left;
