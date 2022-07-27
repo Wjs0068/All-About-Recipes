@@ -13,7 +13,7 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
 
       <Routes>
@@ -28,7 +28,7 @@ function App() {
           <Route exact path="/myRecipes" element={<UserRecipes />} />
         </Route>
       </Routes>
-    </div>
+    </>
   );
 }
 

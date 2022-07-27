@@ -1,22 +1,25 @@
 .list-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 5rem;
+  margin-top: 13rem;
 }
 
 .list-container__headerAll--container {
-  position: sticky;
-  top: 60px;
-  z-index: 20;
+  position: fixed;
+  top: 47px;
+  width: 100%;
+  height: 6rem;
 
-  height: 10rem;
+  z-index: 20;
 }
 
 .headerAll {
+  padding-top: 4rem;
   font-size: 3.6rem;
   color: #333;
-  padding: 4rem;
-  font-weight: 700;
+
+  padding-bottom: 2rem;
+  font-family: "Raleway", sans-serif;
 
   text-align: center;
 
@@ -87,23 +90,27 @@
 .headerTwo {
   font-size: 4rem;
   color: #333;
+  font-family: "Raleway", sans-serif;
 }
 
 .headerThree {
   font-size: 2.2rem;
   color: #333;
+  font-family: "Raleway", sans-serif;
   padding-bottom: 2rem;
 }
 
 .headerFour {
   font-size: 1.8rem;
   color: #333;
+  font-family: "Raleway", sans-serif;
   padding-bottom: 2rem;
 }
 
 .headerFive {
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-family: "Raleway", sans-serif;
 }
 
 .ingredient-container1 {
@@ -113,6 +120,7 @@
   padding-bottom: 0.5rem;
   padding: 1rem;
   width: 26rem;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -120,8 +128,8 @@
 
 .ingredient-name {
   font-size: 1.2rem;
-
   text-align: left;
+  font-family: "Raleway", sans-serif;
   word-break: break-word;
   width: 75%;
 }
@@ -129,11 +137,18 @@
 .ingredient-amount {
   font-size: 1.2rem;
   width: 25%;
+  font-family: "Raleway", sans-serif;
+}
+
+.description-container {
+  width: 30rem;
+  word-break: break-all;
 }
 .description {
   text-align: left;
   font-size: 1.4rem;
   padding: 1rem;
+  font-family: "Raleway", sans-serif;
 }
 
 .image {
@@ -145,6 +160,7 @@
 
 .stars {
   font-size: 2.4rem;
+  font-family: "Raleway", sans-serif;
 }
 
 @media (max-width: 1075px) {

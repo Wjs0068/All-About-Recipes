@@ -1,0 +1,35 @@
+.mobile-nav {
+  height: auto;
+  width: 70%;
+  background-color: white;
+  right: 0;
+  position: fixed;
+  z-index: 25;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: end;
+  display: none;
+}
+
+.link {
+  text-align: left;
+}
+
+.empty {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-nav {
+    display: flex;
+  }
+
+  .login {
+    font-size: 1.8rem;
+  }
+  .logout {
+    font-size: 1.8rem;
+  }
+}

@@ -97,7 +97,7 @@ function Form() {
               <input
                 className="input-form"
                 name="name"
-                placeholder="Enter Ingredient"
+                placeholder="Ingredient"
                 value={x.name}
                 onChange={(e) => handleInputChange(e, i)}
               ></input>
@@ -105,7 +105,7 @@ function Form() {
               <input
                 className="input-form"
                 name="amount"
-                placeholder="Please enter the amount"
+                placeholder="Amount"
                 value={x.amount}
                 onChange={(e) => handleInputChange(e, i)}
               ></input>

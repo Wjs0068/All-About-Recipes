@@ -1,6 +1,9 @@
 h1 {
   font-size: 3.8rem;
+  font-family: "Raleway", sans-serif;
   color: #333;
-  margin-top: 4rem;
+  /* margin-top: 4rem;
   margin-bottom: 8rem;
+   position: relative; 
+  z-index: 1;   */
 }

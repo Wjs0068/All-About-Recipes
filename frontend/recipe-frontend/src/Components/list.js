@@ -74,7 +74,9 @@ function List() {
                     })}
                   </div>
                   <h5 className="headerFive">Instructions</h5>
-                  <p className="description">{recipe.description}</p>
+                  <div className="description-container">
+                    <p className="description">{recipe.description}</p>
+                  </div>
                 </div>
               </div>
             </div>

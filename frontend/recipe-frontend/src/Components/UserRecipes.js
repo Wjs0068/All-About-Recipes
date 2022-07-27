@@ -32,21 +32,17 @@ function UserRecipes() {
   }, [user]);
 
   const handleDelete = (id) => {
-    axios
-      .delete(`http://localhost:5000/recipe/${id}`)
-      .then(() => {
-        window.location.reload(false);
-      });
+    axios.delete(`http://localhost:5000/recipe/${id}`).then(() => {
+      window.location.reload(false);
+    });
   };
 
   const handleEdit = (id) => {
-    axios
-      .get(`http://localhost:5000/recipe/mine/${id}`)
-      .then((userRecipes) => {
-        setRecipe(userRecipes.data);
-        setIngredientList(userRecipes.data[0].ingredients);
-        setEdit(false);
-      });
+    axios.get(`http://localhost:5000/recipe/mine/${id}`).then((userRecipes) => {
+      setRecipe(userRecipes.data);
+      setIngredientList(userRecipes.data[0].ingredients);
+      setEdit(false);
+    });
   };
 
   const handleInputChange = (e, index) => {
@@ -73,10 +69,7 @@ function UserRecipes() {
   const finishEdit = (id) => {
     setRecipe(recipe);
     axios
-      .put(
-        `http://localhost:5000/recipe/change/${id}`,
-        recipe
-      )
+      .put(`http://localhost:5000/recipe/change/${id}`, recipe)
       .then((recipe) => {
         window.location.reload(false);
 
@@ -87,8 +80,10 @@ function UserRecipes() {
   return (
     <>
       {edit ? (
-        <div>
-          <h1 className="headerAll">My Recipes</h1>
+        <>
+          <div className="list-container__headerAll--container">
+            <h1 className="headerAll">My Recipes</h1>
+          </div>
           <div className="list-container">
             {recipeList.map((recipe, key) => {
               return (
@@ -153,7 +148,7 @@ function UserRecipes() {
               );
             })}
           </div>
-        </div>
+        </>
       ) : (
         <div className="container-form">
           <form className="form-create">

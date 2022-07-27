@@ -7,7 +7,8 @@
 }
 .delete {
   font-size: 1.8rem;
-  color: #333;
+  color: white;
+  font-family: "Raleway", sans-serif;
   padding: 0.6rem;
   background-color: #43d1af;
   border: none;
@@ -22,9 +23,10 @@
 
 .edit {
   font-size: 1.8rem;
-  color: #333;
+  color: white;
   padding: 0.6rem;
   background-color: #43d1af;
+  font-family: "Raleway", sans-serif;
   border: none;
 }
 

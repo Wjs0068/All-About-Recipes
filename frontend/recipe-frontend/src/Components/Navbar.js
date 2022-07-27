@@ -5,6 +5,7 @@ import LogoutButton from "./Logout.js";
 import { useAuth0 } from "@auth0/auth0-react";
 import Profile from "./profile.js";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   const { isAuthenticated } = useAuth0();
@@ -18,8 +19,8 @@ const Navbar = () => {
     setMenu(false);
   };
 
-  if (window.innerWidth > 460) {
-    return (
+  return (
+    <>
       <div className="navbar-container">
         <div className="navbar-left">
           <button
@@ -52,53 +53,17 @@ const Navbar = () => {
           <Profile />
           {isAuthenticated ? <LogoutButton /> : <LoginButton />}
         </div>
-      </div>
-    );
-  } else {
-    return menu ? (
-      <div className="whole-thing">
-        <div className="navbar-container">
-          <div className="navbar-left">
-            <AiOutlineClose className="exit" onClick={handleExit} />
-          </div>
-          <div className="navbar-middle">
-            <h3 className="headerThree1">All About Recipes</h3>
-          </div>
-          <div className="navbar-right">
-            {isAuthenticated ? <LogoutButton /> : <LoginButton />}
-          </div>
-        </div>
-        <div className="mobile-menu">
-          <a className="link" href="/">
-            Home
-          </a>
-          <a className="link" href="/form">
-            Create
-          </a>
-          <a className="link" href="/getall">
-            Recipes
-          </a>
-          <a className="link" href="/myRecipes">
-            My Recipes
-          </a>
+        <div className="menu-container">
+          {menu ? (
+            <AiOutlineClose onClick={handleExit} className="exit" />
+          ) : (
+            <AiOutlineMenu onClick={handleMenu} className="menu" />
+          )}
         </div>
       </div>
-    ) : (
-      <div className="whole-thing">
-        <div className="navbar-container">
-          <div className="navbar-left">
-            <AiOutlineMenu className="menu" onClick={handleMenu} />
-          </div>
-          <div className="navbar-middle">
-            <h3 className="headerThree1">All About Recipes</h3>
-          </div>
-          <div className="navbar-right">
-            {isAuthenticated ? <LogoutButton /> : <LoginButton />}
-          </div>
-        </div>
-      </div>
-    );
-  }
+      <MobileNav menu={menu} />
+    </>
+  );
 };
 
 export default Navbar;
